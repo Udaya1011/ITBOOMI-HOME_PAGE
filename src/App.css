@@ -69,9 +69,31 @@ p {
   }
 
   .right {
-    order: -1; 
+    order: -1;
+  }
+
+  .right img {
+    width: 70%;       
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: hue-rotate(270deg) saturate(150%);
+  }
+
+  h1 {
+    font-size: 28px; 
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
   }
 }
+
 
 @media (min-width: 1025px) {
   .App {
