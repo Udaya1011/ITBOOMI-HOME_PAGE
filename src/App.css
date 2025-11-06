@@ -1,0 +1,68 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(244, 37%, 16%);
+  color: white;
+  float:1;
+  margin: 50px;
+  padding: 50px;
+}
+
+body{
+  background-color: hsl(233, 47%, 7%);
+font-weight: 400,700;
+}
+
+h1{
+  color: hsl(0, 0%, 100%);
+  font-size: 50px;
+}
+p{
+  color: hsla(0, 0%, 100%, 0.75);
+}
+h2{
+ color:hsl(0, 0%, 100%)
+}
+
+.three{
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.right{
+  filter: hue-rotate(270deg) saturate(2) brightness(0.9);
+  justify-content: center;
+}
+
+
+@media (min-width:376px) and (max-width:1024px){
+  .App{
+    flex-direction: column;
+    padding: 30px;
+  }
+  .left{
+align-items: center;
+text-align: center;
+  }
+  .three{
+    text-align: center;
+flex-direction: column;
+justify-content: space-around;
+padding-left: 40%;
+gap: 20px;
+  }
+  
+  .right{
+    order: -1;
+  }
+  .right img{
+height: 300px;
+padding-left: 10%;
+color: blue;
+  filter: hue-rotate(270deg) saturate(150%);
+  }
+}
+
