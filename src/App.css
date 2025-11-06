@@ -1,67 +1,105 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  color: white;
+  font-weight: 400;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 36px; 
+  margin: 0 0 15px 0;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin: 0 0 10px 0;
+}
+
 .App {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   background-color: hsl(244, 37%, 16%);
-  color: white;
-  float:1;
-  margin: 50px;
-  padding: 50px;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
-body{
-  background-color: hsl(233, 47%, 7%);
-font-weight: 400,700;
-}
-
-h1{
-  color: hsl(0, 0%, 100%);
-  font-size: 50px;
-}
-p{
-  color: hsla(0, 0%, 100%, 0.75);
-}
-h2{
- color:hsl(0, 0%, 100%)
-}
-
-.three{
+.three {
   display: flex;
-  gap: 100px;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  flex-direction: column; 
+  gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
-.right{
-  filter: hue-rotate(270deg) saturate(2) brightness(0.9);
-  justify-content: center;
+.left, .right {
+  width: 100%;
 }
 
+.right img {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  filter: hue-rotate(270deg) saturate(150%);
+  display: block;
+  margin: 0 auto;
+}
 
-@media (min-width:375px) and (max-width:1024px){
-  .App{
-    flex-direction: column;
+@media (min-width: 375px) and (max-width: 1024px) {
+  .App {
     padding: 30px;
   }
-  .left{
-align-items: center;
-text-align: center;
-  }
-  .three{
+
+  .three {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
     text-align: center;
-flex-direction: column;
-justify-content: space-around;
-padding-left: 40%;
-gap: 20px;
   }
-  
-  .right{
-    order: -1;
-  }
-  .right img{
-height: 300px;
-padding-left: 10%;
-color: blue;
+
+  .right {
+    order: -1; 
   }
 }
 
+@media (min-width: 1025px) {
+  .App {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+
+  .three {
+    flex-direction: row;
+    gap: 100px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .left, .right {
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .right img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
