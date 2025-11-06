@@ -38,7 +38,7 @@ h2{
 }
 
 
-@media (min-width:375px) and (max-width:1440px){
+@media (min-width:375px) and (max-width:1024px){
   .App{
     flex-direction: column;
     padding: 30px;
@@ -62,7 +62,6 @@ gap: 20px;
 height: 300px;
 padding-left: 10%;
 color: blue;
-  filter: hue-rotate(270deg) saturate(150%);
   }
 }
 
